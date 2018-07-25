@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <title>KRYPT ARENA</title>
+    <style>
+
+    #nav{
+    line-height:30px;
+    background-color:#E6D6A2;
+    margin:auto;
+    width:80%;
+    padding: 10px;
+    padding-left: 20px;
+    height: 600px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #cc9900;
+
+    }
+    #form {
+
+    margin-top: 50px;
+    width: 30%;
+    padding: 10px;
+    border: 2px solid #cc9900;
+    float: right;
+    margin-right: 20px;
+    }
+    #instr {
+    float: left;
+    width: 50%;
+    }
+
+    body{
+    font-family:"Segoe UI Symbol";
+    }
+    .bbutton {
+    border: 3px double #FC6;
+    border-top-color: #FC9;
+    border-left-color: #FC9;
+    }
+    .bbutton:hover {
+    border-color: #F00 #C30 #C30 #F00;
+    margin: auto;
+    }
+
+    input[type="text"] {
+    width: 150px;
+    }
+
+    </style>
+    <script type="text/javascript">
+
+    function validateForm() {
+    var x = document.getElementById("id1").value;
+    if (x == null || x == "" || x.length!=10) {
+        alert("Invalid Data..");
+        return false;
+    }
+    return true;
+    }
+
+    </script>
+</head>
+
+<body bgcolor="#453645">
+    <div id="nav">
+        <h1 align="center">KRYPT ARENA</h1><br>
+
+        <div id="instr">
+            <br>
+
+            <p><b>INSTRUCTIONS</b><br>
+            1. THIS ROUND WILL HAVE 20 MULTIPLE CHOICE QUESTIONS TO BE ANSWERED
+            IN 15 MINS<br>
+            2. EACH CORRECT ANSWER CARRY 1 MARK<br>
+            3. NO NEGATIVE MARKS<br>
+            <b>4. ONLY WHEN YOU "SUBMIT" YOUR ANSWERS WILL BE EVALUATED</b><br>
+            5. EACH QUESTION WILL HAVE 5 OPTIONS.THE 5TH OPTION IS CHECKED BY
+            DEFAULT.<br>
+            &nbsp;&nbsp; IT INDICATES THE QUESTION IS UNANSWERED. ie NO MARK
+            WILL BE DEDUCTED FOR THE SAME.</p><br>
+            <b>6. DO NOT TRY TO REFRESH YOUR PAGE - SCORE WILL BE INVALIDATED</b>
+        </div>
+
+        <div id="form">
+            <b>Enter your mobile number provided during registration:</b><br>
+            <br>
+
+            <form action="set.jsp" id="sform" method="get" name="sform"
+            onsubmit="return validate_form()">
+                <table>
+                    <tr>
+                        <td style="font-weight: bold">Participant Name:</td>
+
+                        <td><input id="n1" required  name="n1" type="text"></td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight: bold">Participant Mobile
+                        No:</td>
+
+                        <td><input id="id1" name="id1"  required pattern="[0-9]{10}"
+                        type="text"></td>
+                    </tr>
+                </table><input id="in" name="in" type="hidden" value="123"><br>
+                <input class="bbutton" type="submit" value="Submit"><br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
